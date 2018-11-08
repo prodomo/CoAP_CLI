@@ -5,14 +5,15 @@
 * pip
 
 ## Installing
-* pip install requests (2.19.1)
-* pip install beautifulsoup4 (4.6.3)
-* npm install coap-cli -g (use sudo to install it.)
+* pip install -r requirements.txt
+
+## Database Connection
+* Please copy `example.cfg` and rename it to `config.cfg`. The programe will read this file to connect the mysql database.
 
 ## Command Line
 * getallmotes
     * Ex : getallmotes fd00::201:1:1:1
-    * (get all motes address to created list table)
+    * (get all motes address from host, then created list table)
 
 * list
     * Ex : list
@@ -20,11 +21,19 @@
 
 * post
     * Ex : post fd00::202:2:2:2 bcollect thd=5&pp=2
-    * (post resource and query to node)
+    * (post node's resource and query to node)
+
+* postall
+    * Ex : postall bcollect thd=5&pp=2
+    * (postall resource and query to nodes)
 
 * observe
     * Ex : observe fd00::202:2:2:2 bcollect
     * (observing bcollect resource)
+
+* observeall
+    * Ex : observeall
+    * (First need to run getallmotes.)
 
 * observelist
     * Ex : observelist
@@ -36,4 +45,4 @@
 
 * quit
     * Ex : quit
-    * (exiting tool, if you want exit, need delete all done)
+    * (exiting tool, it will auto cancel observing nodes)

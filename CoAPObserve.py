@@ -1,7 +1,7 @@
 import threading
 from coapthon.client.helperclient import HelperClient
 
-from MoteData import MoteData
+from MoteData3 import MoteData
 import logging
 log = logging.getLogger("CoAPObserve")
 
